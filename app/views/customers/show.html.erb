@@ -17,6 +17,7 @@
     
    <h2>対応履歴</h2>
     <% @comments.each do |comment| %>
+    
       <div class="media">
         <div class="media-body">
           <%= simple_format(comment.body) %>
@@ -41,6 +42,7 @@
       </div>
     <% end %>
  
+  <%= image_tag(current_user.image_url, :size => "150x100") %>
     
     <%= form_for(@comment, url: { controller: :comments, action: :create }) do |f| %>
       <div class="form-group">

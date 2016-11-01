@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   
-   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :index, :show]
    before_action :set_customers,      only: [:show, :edit, :update, :destroy]
    
   
@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
     if  @customer.save
       redirect_to @customer
     else
-      render :new
+      render :new 
     end
   end
 
