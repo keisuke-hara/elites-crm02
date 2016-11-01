@@ -23,6 +23,7 @@ class CommentsController < ApplicationController
        render template: "customers/show"
     end
   end
+  
 
   def edit
 
